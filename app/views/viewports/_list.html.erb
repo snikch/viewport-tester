@@ -1,0 +1,13 @@
+<form action="<%= viewport_path %>" method="GET">
+  <label>Width: <input name="width" value="<%= @width %>" /></label><br />
+  <label>Initial Scale: <input name="initial-scale" value="<%= @initial_scale %>"  /></label><br />
+  <label>Minimum Scale: <input name="minimum-scale" value="<%= @minimum_scale %>"  /></label><br />
+  <label>Maximum Scale: <input name="maximum-scale" value="<%= @maximum_scale %>"  /></label><br />
+  <input type="submit" />
+</form>
+<ul>
+  <li><a href="<%= viewport_path "initial-scale" => 1 %>">Initial Scale: 1</a></li>
+  <li><a href="<%= viewport_path "width" => 320 %>">Width: 320</a></li>
+  <li><a href="<%= viewport_path "width" => "device-width" %>">Width: device-width</a></li>
+  <li><a href="<%= viewport_path "width" => "320", "initial-scale" => 0.5 %>">Width: 320, Initial Scale: 0.5</a></li>
+</ul>
