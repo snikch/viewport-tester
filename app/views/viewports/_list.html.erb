@@ -6,8 +6,11 @@
   <input type="submit" />
 </form>
 <ul>
+  <li><a href="<%= viewport_path %>">Default</a></li>
   <li><a href="<%= viewport_path "initial-scale" => 1 %>">Initial Scale: 1</a></li>
+  <li><a href="<%= viewport_path "minimum-scale" => 1 %>">Minimum Scale: 1</a></li>
   <li><a href="<%= viewport_path "width" => 320 %>">Width: 320</a></li>
   <li><a href="<%= viewport_path "width" => "device-width" %>">Width: device-width</a></li>
+  <li><a href="<%= viewport_path "width" => "320", "initial-scale" => 1 %>">Width: 320, Initial Scale: 1</a></li>
   <li><a href="<%= viewport_path "width" => "320", "initial-scale" => 0.5 %>">Width: 320, Initial Scale: 0.5</a></li>
 </ul>

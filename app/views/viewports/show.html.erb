@@ -1,2 +1,10 @@
-<h1>Viewport: <%= viewport_content %></h1>
+<p>Viewport: <%= viewport_content %></p>
 <%= render partial: "list" %>
+<div id="info" style="border: 1px solid #000; margin: 10px; padding: 10px">Info:<br /></div>
+<div style="background-color:#ff0000; width: 320px; min-height: 100px">This div is 320px wide</div>
+<div style="background-color:#00ff00; width: 640px; min-height: 100px">This div is 640px wide</div>
+<script>
+  var info = document.getElementById('info');
+  info.innerHTML += 'window.innerWidth = ' + window.innerWidth;
+  info.innerHTML += '<br />document.body.scrollWidth = ' + document.body.scrollWidth;
+</script>
